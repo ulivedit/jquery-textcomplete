@@ -471,7 +471,7 @@
         }
 
         for (i = 0, l = data.length; i < l; i++) {
-          val = data[i];
+          val = data[i]["name"]; // change to work for us
           if (include(this.data, val)) continue;
           index = this.data.length;
           this.data.push(val);
