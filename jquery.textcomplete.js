@@ -558,6 +558,7 @@
 
       select: function (index) {
         var self = this;
+        console.log(this.data);
         this.completer.onSelect(this.data[index]);
         // Deactive at next tick to allow other event handlers to know whether
         // the dropdown has been shown or not.
