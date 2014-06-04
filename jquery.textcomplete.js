@@ -471,12 +471,12 @@
         }
 
         for (i = 0, l = data.length; i < l; i++) {
-          val = data[i]["name"]; // change to work for us
+          val = data[i]; // change to work for us
           if (include(this.data, val)) continue;
           index = this.data.length;
           this.data.push(val);
           html += '<li class="textcomplete-item" data-index="' + index + '"><a>';
-          html +=   this.strategy.template(val);
+          html +=   this.strategy.template(val["name"]);
           html += '</a></li>';
           if (this.data.length === this.strategy.maxCount) break;
         }
